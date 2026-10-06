@@ -21,6 +21,13 @@ namespace WorkshopCarzCo
             vehicles.Add(new Truck("Scania", "R500", 3));
             vehicles.Add(new Car("Toyota", "Corolla", 4));
 
+            vehicles.Add(new HastVagn(300, "oats", 3, "Ferrari", "Mustang", 2));
+            vehicles.Add(new Buss(12,40,"diesel", "volvo", "nånting", 4));
+            vehicles.Add(new Boat(200,10,9000,"viking", "galaxy", 200));
+
+
+
+
             // Skriv ut alla fordon
             foreach (Vehicle vehicle in vehicles)
             {
@@ -65,9 +72,8 @@ namespace WorkshopCarzCo
                 Console.WriteLine($"\nSäljer fordon: {vehicle}");
                 vehicles.Remove(vehicle);
             }
-
+//
             
-
         }
     }
 }

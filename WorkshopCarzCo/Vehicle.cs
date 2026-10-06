@@ -30,7 +30,7 @@ namespace WorkshopCarzCo
 
         public abstract void Drive(); // Abstract method
 
-        public void PrintInfo() // Abstract method
+        public virtual void PrintInfo() // Abstract method
         {
             Console.WriteLine($"\nFORDON: {GetType().Name}\n" +
                                   $"Märke: {Brand}\n" +
