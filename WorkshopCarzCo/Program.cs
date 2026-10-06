@@ -44,13 +44,68 @@ namespace WorkshopCarzCo
                 //}    
             }
 
-            // Filtrera och skriv ut bara bilar
-            Console.WriteLine("\nBara bilar:");
-            var cars = FilterVehicles<Car>(vehicles);
-            foreach (var car in cars)
+            // Sortera bland olika fordon
+            Console.WriteLine("Fordon med fler än fyra dörrar.");
+            foreach (Vehicle vehicle in vehicles)
             {
-                car.PrintInfo();
+                if (vehicle.DoorAmount >= 4)
+                {
+                    vehicle.PrintInfo();
+                }
+                
+                //switch (vehicle)
+                //{
+                //    case Car:
+                //        if (vehicle.DoorAmount >= 4)
+                //        {
+                //            vehicle.PrintInfo();
+                //        }
+                //        break;
+
+                //    case Truck:
+                //        if (vehicle.DoorAmount >= 4)
+                //        {
+                //            vehicle.PrintInfo();
+                //        }
+                //        break;
+
+                //    case Buss:
+                //        if (vehicle.DoorAmount >= 4)
+                //        {
+                //            vehicle.PrintInfo();
+                //        }
+                //        break;
+
+                //    case Boat:
+                //        if (vehicle.DoorAmount >= 4)
+                //        {
+                //            vehicle.PrintInfo();
+                //        }
+                //        break;
+
+                //    case HastVagn:
+                //        break;
+
+                //    case Motorcycle:
+                //        break;
+
+                //    default:
+                //        Console.WriteLine("Inte ett av de tillåtna fordonen.");
+                //        break;
+                //}
+                // Only allowed vehicles
+                
+
             }
+
+
+
+            //Console.WriteLine("\nBara bilar:");
+            //var cars = FilterVehicles<Car>(vehicles);
+            //foreach (var car in cars)
+            //{
+            //    car.PrintInfo();
+            //}
 
             // Sälj ett fordon
             var vehicleToSell = vehicles.Find(v => v.Brand == "Toyota");
@@ -72,7 +127,6 @@ namespace WorkshopCarzCo
                 Console.WriteLine($"\nSäljer fordon: {vehicle}");
                 vehicles.Remove(vehicle);
             }
-//
             
         }
     }
